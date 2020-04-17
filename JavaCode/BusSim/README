@@ -1,0 +1,8 @@
+Main driver program creates BusSim objects. It uses a nested for-loop to ensure that every combination of regular/express bus is simulated.
+This is done for an inter-arrival rate of 60, 120, and 240 seconds and this whole process is repeated 3 times for a total of 945 simulations.
+The overall statistics for each load are printed if one runs the main program.
+The buses are stored in an array and each have an associated current stop. The stops are implemented in a linked-list style so that each stop points to
+the stop in front of it and stop 29 points to stop 0. This was done because it creates a circular data structure that makes it easy to advance each bus to the next stop.
+Each stop contains a generic queue of riders in "line".
+There is also an included Statistics class that most other classes reference. This class is fairly complicated and utilizes a lot of variables but you can look at the bottom to the
+statistics statement if you want to see some of the statistics being tracked.
